@@ -1,21 +1,20 @@
-import React from "react";
-import { CalendarStyled } from "../components/CalendarStyled";
-import { connect } from "react-redux";
-import { MonthItem } from "../components/MonthItem";
+import React from "react"
+import {CalendarStyled} from "../components/CalendarStyled";
+import {connect} from "react-redux";
+import {MonthItem} from "../components/MonthItem";
 
-const Calendar = (props) => {
+const Calendar = ({months}) => {
   return (
+
     <CalendarStyled>
-      {props.data &&
-        props.data.map((e) => <MonthItem key={e.month}>{e.month}</MonthItem>)}
+      {months &&
+        months.map((e, i) => <MonthItem key={i} month={e} />)}
     </CalendarStyled>
-  );
-};
+  )
+}
 
 const mapStateToProps = (state) => {
-  console.log(state);
-
-  return { ...state };
+  return {months: [...Object.keys(state)]}
 };
 
-export default connect(mapStateToProps)(Calendar);
+export default connect(mapStateToProps)(Calendar)

@@ -9,10 +9,8 @@ function App() {
     return (
         <Router>
             <Switch>
-                <Route path='/day'>
-                    <DayCalendar />
-                </Route>
-
+                <Route path='/:month'
+                    component={DayCalendar} />
                 <Route path='/'>
                     <Navbar />
                     <Calendar />

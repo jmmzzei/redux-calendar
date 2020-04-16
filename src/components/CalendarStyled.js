@@ -5,6 +5,6 @@ export const CalendarStyled = styled.section`
   margin: 0;
   padding: 5px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(${props => props.month ? 6 : 4}, 1fr);
+  grid-template-rows: repeat(${props => props.month ? 5 : 3}, 1fr);
 `;

@@ -1,20 +1,31 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { CalendarStyled } from '../components/CalendarStyled'
+import { Navbar } from '../components/Navbar'
+import { DayItem } from '../components/DayItem'
 
-const DayCalendar = (props) => {
-
+const DayCalendar = ({ match, months }) => {
+    let month = match.params.month
     return (
-        <div>
-            in /day path
-        </div>
+        <>
+            <Navbar month={month} />
+            <CalendarStyled month>
+                {(() => {
+                    let arr = []
+                    for (let i = 0; i < months[month].days; i++) {
+                        arr.push(<DayItem key={i} day={i + 1} activities={months[month].activities} />)
+                    }
+                    return arr
+                }
+                )()}
+
+            </CalendarStyled>
+        </>
     )
 }
 
-const mapStateToProps = (state) => {
-    console.log(state)
-    return (
-        { ...state }
-    )
-}
+const mapStateToProps = (state) => (
+    { months: { ...state } }
+)
 
 export default connect(mapStateToProps)(DayCalendar)
