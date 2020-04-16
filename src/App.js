@@ -1,15 +1,25 @@
 import React from "react";
 import "./App.css";
-import {Navbar} from "./components/Navbar";
+import { Navbar } from "./components/Navbar";
 import Calendar from "./containers/Calendar";
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import DayCalendar from './containers/DayCalendar'
 
 function App() {
-  return (
-    <>
-      <Navbar />
-      <Calendar />
-    </>
-  );
+    return (
+        <Router>
+            <Switch>
+                <Route path='/day'>
+                    <DayCalendar />
+                </Route>
+
+                <Route path='/'>
+                    <Navbar />
+                    <Calendar />
+                </Route>
+            </Switch>
+        </Router>
+    );
 }
 
 export default App;
