@@ -1,2 +1,3 @@
-export const ADD_ACTIVITY = "ADD_ACTIVITY";
-export const REMOVE_ACTIVITY = "REMOVE_ACTIVITY";
+export const ADD_ACTIVITY = "ADD_ACTIVITY"
+export const REMOVE_ACTIVITY = "REMOVE_ACTIVITY"
+export const SYNC_STORE = "SYNC_STORE"

@@ -7,6 +7,11 @@ export const DayItemStyled = styled.article`
   padding: 10px;
   margin: 5px;
 
+form{
+  width: 70%;
+  margin: 5px ;
+}
+
   div {
     display: flex;
     align-items: flex-start;
