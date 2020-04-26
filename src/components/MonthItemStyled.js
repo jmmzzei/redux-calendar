@@ -2,23 +2,25 @@ import styled from "styled-components";
 
 export const MonthItemStyled = styled.article`
   border-radius: 10px;
-  border: 1px solid black;
   min-height: 100px;
   padding: 10px;
   margin: 5px;
-
-  div {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  p{
+     text-decoration: none;
   }
 
-  button {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background: black;
-    color: white;
-    border: none;
+  &:hover{
+    animation: show 0.3s ease forwards; 
   }
+
+  @keyframes show {
+    to{
+      box-shadow: 0 0 0.3em ${props => '#0000' + props.x};
+    }
+  }
+
 `;
