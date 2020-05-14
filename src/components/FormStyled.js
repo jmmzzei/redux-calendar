@@ -1,34 +1,44 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
 export const FormStyled = styled.form`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 5px;
-    
-    h4{
-      margin: 2px;
-    }
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.5rem;
+  animation: show 0.5s ease forwards;
 
-    input{
-      border: none;
-      background: lightgrey;
-      border-radius: 5px; 
-      width: 70%;
-      margin: 2px;
+  @keyframes show {
+    0% {
+      opacity: 0;
+      transform: translateY(-2rem);
     }
-    
-    button {
-      width: 25px;
-      height: 25px;
-      border-radius: 50%;
-      color: white;
-      border: none;
-      background: lightgrey;
-
-      :hover{
-        background: black;
-      }
+    100% {
+      transform: translateY(0);
     }
+  }
 
+  h4 {
+    margin: 0.2rem;
+  }
+
+  input {
+    border: none;
+    background: lightgrey;
+    border-radius: 5px;
+    width: 70%;
+    margin: 0.2rem;
+  }
+
+  button {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    color: white;
+    border: none;
+    background: lightgrey;
+
+    :hover {
+      background: black;
+    }
+  }
 `
