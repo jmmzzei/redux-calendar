@@ -1,34 +1,49 @@
-import React from 'react'
-import { DayItemStyled } from './DayItemStyled'
-import { addActivityAC } from '../actions/addActivityAC'
-import { connect } from 'react-redux'
-import { Form } from './Form'
-import { useInputChange } from '../hooks/useInputChange'
-import TodoItem from './TodoItem'
+import React from "react"
+import { DayItemStyled } from "./DayItemStyled"
+import { addActivityAC } from "../actions/addActivityAC"
+import { connect } from "react-redux"
+import { Form } from "./Form"
+import { useInputChange } from "../hooks/useInputChange"
+import TodoItem from "./TodoItem"
 
 const DayItem = ({ dispatch, activities, day, month }) => {
-    let [input, handleInputChange, cleanInput] = useInputChange('')
+  let [input, handleInputChange, cleanInput] = useInputChange("")
 
-    const isEmpty = (input) => input.trim()
+  const isEmpty = input => input.trim()
 
-    const addTodo = (e) => {
-        e.preventDefault()
-        isEmpty(input) && dispatch(addActivityAC(month, day, input))
-        cleanInput()
-    }
+  const addTodo = e => {
+    e.preventDefault()
+    isEmpty(input) && dispatch(addActivityAC(month, day, input))
+    cleanInput()
+  }
 
-    return (
-        <DayItemStyled>
-            <Form day={day} input={input} onChange={handleInputChange} onClick={addTodo} />
-            <ul>
-                {activities.map((e) =>
-                    (
-                        day === e.day && <TodoItem key={e.index} month={month} index={e.index}>{e.todo}</TodoItem>
-                    )
-                )}
-            </ul>
-        </DayItemStyled>
-    )
+  return (
+    <DayItemStyled>
+      <Form
+        day={day}
+        input={input}
+        onChange={handleInputChange}
+        onClick={addTodo}
+      />
+      <ul>
+        {(() => {
+          let arr = activities
+            .map((e, i) =>
+              day === e.day ? (
+                <TodoItem key={e.index} month={month} index={e.index}>
+                  {e.todo}
+                </TodoItem>
+              ) : (
+                day
+              ),
+            )
+            .filter((e, i, arr) => arr.indexOf(e) === i)
+          let dayit = <div>{day}</div>
+          return arr.length === 0 ? dayit : arr
+        })()}
+      </ul>
+    </DayItemStyled>
+  )
 }
 
 export default connect()(DayItem)
