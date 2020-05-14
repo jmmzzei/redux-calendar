@@ -1,6 +1,6 @@
 export const initialState = {
   enero: {
-    days: 30,
+    days: 31,
     activities: [],
   },
   febrero: {
@@ -28,7 +28,7 @@ export const initialState = {
     activities: [],
   },
   agosto: {
-    days: 30,
+    days: 31,
     activities: [],
   },
   septiembre: {
@@ -46,5 +46,5 @@ export const initialState = {
   diciembre: {
     days: 31,
     activities: [],
-  }
-};
+  },
+}
