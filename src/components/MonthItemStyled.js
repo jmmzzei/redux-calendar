@@ -1,26 +1,22 @@
 import styled from "styled-components";
 
 export const MonthItemStyled = styled.article`
-  border-radius: 10px;
-  min-height: 100px;
-  padding: 10px;
-  margin: 5px;
+  border-radius: 1rem;
+  height: 100%;
+  padding: 1rem;
+  margin: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--dark);
   
   p{
      text-decoration: none;
   }
 
   &:hover{
-    animation: show 0.3s ease forwards; 
+    transition: all 0.3s ease; 
+    background: var(--dark);
+    color: var(--light);
   }
-
-  @keyframes show {
-    to{
-      box-shadow: 0 0 0.3em ${props => '#0000' + props.x};
-    }
-  }
-
 `;
