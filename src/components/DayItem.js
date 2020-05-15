@@ -19,6 +19,7 @@ const DayItem = ({ dispatch, activities, day, month }) => {
 
   return (
     <DayItemStyled>
+      <p>{day}</p>
       <Form
         day={day}
         input={input}
@@ -27,19 +28,15 @@ const DayItem = ({ dispatch, activities, day, month }) => {
       />
       <ul>
         {(() => {
-          let arr = activities
-            .map((e, i) =>
-              day === e.day ? (
+          let arr = activities.map(
+            (e, i) =>
+              day === e.day && (
                 <TodoItem key={e.index} month={month} index={e.index}>
                   {e.todo}
                 </TodoItem>
-              ) : (
-                day
               ),
-            )
-            .filter((e, i, arr) => arr.indexOf(e) === i)
-          let dayit = <div>{day}</div>
-          return arr.length === 0 ? dayit : arr
+          )
+          return arr
         })()}
       </ul>
     </DayItemStyled>
