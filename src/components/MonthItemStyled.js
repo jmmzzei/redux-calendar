@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 export const MonthItemStyled = styled.article`
   border-radius: 1rem;
@@ -9,14 +9,25 @@ export const MonthItemStyled = styled.article`
   align-items: center;
   justify-content: center;
   color: var(--dark);
-  
-  p{
-     text-decoration: none;
+  opacity: 0;
+
+  @keyframes app {
+    0% {
+      transform: translateY(-4px);
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 
-  &:hover{
-    transition: all 0.3s ease; 
+  p {
+    text-decoration: none;
+  }
+
+  &:hover {
+    transition: all 0.3s ease;
     background: var(--dark);
     color: var(--light);
   }
-`;
+`
