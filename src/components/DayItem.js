@@ -18,7 +18,7 @@ const DayItem = ({ dispatch, activities, day, month }) => {
   }
 
   return (
-    <DayItemStyled>
+    <DayItemStyled id={"id" + day}>
       <p>{day}</p>
       <Form
         day={day}
@@ -27,17 +27,14 @@ const DayItem = ({ dispatch, activities, day, month }) => {
         onClick={addTodo}
       />
       <ul>
-        {(() => {
-          let arr = activities.map(
-            (e, i) =>
-              day === e.day && (
-                <TodoItem key={e.index} month={month} index={e.index}>
-                  {e.todo}
-                </TodoItem>
-              ),
-          )
-          return arr
-        })()}
+        {activities.map(
+          e =>
+            day === e.day && (
+              <TodoItem key={e.index} month={month} index={e.index}>
+                {e.todo}
+              </TodoItem>
+            ),
+        )}
       </ul>
     </DayItemStyled>
   )

@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components"
 
 export const DayItemStyled = styled.article`
   border-radius: 1rem;
@@ -11,6 +11,18 @@ export const DayItemStyled = styled.article`
   overflow-y: auto;
   overflow-x: hidden;
   word-break: break-word;
+
+  opacity: 0;
+
+  @keyframes app {
+    0% {
+      transform: translateY(-4px);
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 
   :hover > form {
     display: flex;
