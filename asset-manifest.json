@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/redux-calendar/static/css/main.2e764aee.chunk.css",
+    "main.js": "/redux-calendar/static/js/main.1abe1dde.chunk.js",
+    "main.js.map": "/redux-calendar/static/js/main.1abe1dde.chunk.js.map",
+    "runtime-main.js": "/redux-calendar/static/js/runtime-main.2613138c.js",
+    "runtime-main.js.map": "/redux-calendar/static/js/runtime-main.2613138c.js.map",
+    "static/js/2.956cb1b2.chunk.js": "/redux-calendar/static/js/2.956cb1b2.chunk.js",
+    "static/js/2.956cb1b2.chunk.js.map": "/redux-calendar/static/js/2.956cb1b2.chunk.js.map",
+    "index.html": "/redux-calendar/index.html",
+    "precache-manifest.0844cf0904874b438611892715d6579d.js": "/redux-calendar/precache-manifest.0844cf0904874b438611892715d6579d.js",
+    "service-worker.js": "/redux-calendar/service-worker.js",
+    "static/css/main.2e764aee.chunk.css.map": "/redux-calendar/static/css/main.2e764aee.chunk.css.map",
+    "static/js/2.956cb1b2.chunk.js.LICENSE.txt": "/redux-calendar/static/js/2.956cb1b2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2613138c.js",
+    "static/js/2.956cb1b2.chunk.js",
+    "static/css/main.2e764aee.chunk.css",
+    "static/js/main.1abe1dde.chunk.js"
+  ]
+}
