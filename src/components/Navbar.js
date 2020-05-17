@@ -5,6 +5,8 @@ import { HomeBtn } from "./HomeBtn"
 export const Navbar = ({ month }) => (
   <NavbarStyled>
     <HomeBtn />
-    <p>{month || "2020 Calendar"}</p>
+    <div>
+      <span>{month || "2020 Calendar"}</span>
+    </div>
   </NavbarStyled>
 )
