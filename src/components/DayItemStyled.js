@@ -1,17 +1,17 @@
 import styled, { css } from "styled-components"
 
 export const DayItemStyled = styled.article`
-  border-radius: 1rem;
-  //border: 1px solid lightgrey;
-
   width: 100%;
-  height: 10rem;
+  min-height: 5rem;
+  max-height: 10rem;
+
   padding: 0.5rem;
+  margin: 0;
 
   overflow-y: auto;
   overflow-x: hidden;
   word-break: break-word;
-
+  border-radius: 1rem;
   opacity: 0;
 
   @keyframes app {
