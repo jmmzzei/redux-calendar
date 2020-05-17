@@ -17,7 +17,8 @@ function createCSS(items) {
 }
 
 export const CalendarStyled = styled.section`
-  height: calc(100vh - 5rem - 5rem);
+  height: calc(100vh - 8rem);
+  background: var(--primary);
   margin: 0;
   padding: 0.5rem;
   display: grid;
