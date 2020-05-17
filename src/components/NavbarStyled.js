@@ -4,14 +4,12 @@ export const NavbarStyled = styled.nav`
   color: var(--light);
   background: var(--dark);
   user-select: none;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
-  height: 5rem;
+  box-shadow: 0 -2rem 1rem #000000;
+  height: 8rem;
   margin: 0;
-  padding: 4rem 0;
 
   overflow: hidden;
 

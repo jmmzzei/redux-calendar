@@ -1,10 +1,10 @@
-import styled from 'styled-components'
+import styled from "styled-components"
 
 export const TodoItemStyled = styled.li`
   margin: 5px 0;
   opacity: 0;
-  animation: addTodo 0.5s ease forwards;
   list-style: none;
+  animation: addTodo 0.5s ease forwards;
 
   @keyframes addTodo {
     to{
@@ -13,20 +13,30 @@ export const TodoItemStyled = styled.li`
     }
   }
 
-  button{
+  :hover button {
+    opacity: 1;
+    transition: opacity 1s ease; 
+  }
+
+    button{
+    opacity: 0;
     border: none;
     margin: 0 5px;  
-    width: 20px;
-    height: 20px;
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
+    background: var(--secondary);
+    font-weight: bold;
+    
     &:hover{
       animation: hover 0.3s ease forwards;
     }
   }
+  
   @keyframes hover {
     to{
-      color: white;
-      background: red;
+      color: var(--secondary);
+      background: black;
     }
   }
 }

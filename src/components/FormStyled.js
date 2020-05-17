@@ -19,11 +19,13 @@ export const FormStyled = styled.form`
 
   h4 {
     margin: 0.2rem;
+    color: var(--light);
   }
 
   input {
     border: none;
-    background: lightgrey;
+    background: var(--primary);
+    color: var(--light);
     border-radius: 5px;
     width: 70%;
     margin: 0.2rem;
@@ -35,10 +37,21 @@ export const FormStyled = styled.form`
     border-radius: 50%;
     color: white;
     border: none;
-    background: lightgrey;
+    background: var(--accent);
+    font-weight: bold;
 
     :hover {
-      background: black;
+      animation: gradient 1s ease forwards;
+    }
+
+    @keyframes gradient {
+      100% {
+        background: linear-gradient(
+          45deg,
+          var(--accent),
+          var(--secondary) 100%
+        );
+      }
     }
   }
 `

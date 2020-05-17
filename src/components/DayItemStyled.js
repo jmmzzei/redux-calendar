@@ -2,7 +2,7 @@ import styled, { css } from "styled-components"
 
 export const DayItemStyled = styled.article`
   border-radius: 1rem;
-  border: 1px solid lightgrey;
+  //border: 1px solid lightgrey;
 
   width: 100%;
   height: 10rem;
@@ -24,6 +24,10 @@ export const DayItemStyled = styled.article`
     }
   }
 
+  :hover {
+    background: var(--dark);
+  }
+
   :hover > form {
     display: flex;
   }
@@ -39,7 +43,7 @@ export const DayItemStyled = styled.article`
   p {
     margin: 0;
     background: #00000020;
-    color: var(--dark);
+    color: var(--light);
     border-radius: 50%;
     width: 3rem;
     height: 3rem;
@@ -52,5 +56,6 @@ export const DayItemStyled = styled.article`
   ul {
     margin: 0 2rem;
     padding: 0;
+    color: var(--light);
   }
 `
