@@ -7,17 +7,18 @@ export const HomeBtnStyled = styled.button`
   border: none;
   border-radius: 50%;
   margin: 3rem;
-  background: var(--accent);
+  background: var(--light);
   color: var(--dark);
   font-weight: bold;
 
   :hover {
-    animation: gradient 1s ease forwards;
+    animation: color 0.3s ease forwards;
   }
 
-  @keyframes gradient {
+  @keyframes color {
     100% {
-      background: linear-gradient(45deg, var(--accent), var(--secondary) 160%);
+      background: var(--secondary);
+      color: var(--light);
     }
   }
 `

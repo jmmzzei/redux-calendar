@@ -32,25 +32,23 @@ export const FormStyled = styled.form`
   }
 
   button {
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 2.4rem;
+    height: 2.4rem;
     border-radius: 50%;
-    color: white;
-    border: none;
-    background: var(--accent);
+    border: 1.3px solid var(--secondary);
+    color: var(--secondary);
+    background: var(--dark);
     font-weight: bold;
 
     :hover {
-      animation: gradient 1s ease forwards;
+      animation: gradient 0.3s ease forwards;
     }
 
     @keyframes gradient {
       100% {
-        background: linear-gradient(
-          45deg,
-          var(--accent),
-          var(--secondary) 100%
-        );
+        color: var(--dark);
+        border: 1.5px solid var(--light);
+        background: var(--light);
       }
     }
   }

@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "react-router-dom"
+import { NPBtnStyled } from "./NPBtnStyled"
 
 export const NPBtn = ({ match, next }) => {
   let month = match && match.params.month
@@ -27,7 +28,7 @@ export const NPBtn = ({ match, next }) => {
 
   return (
     <Link to={goto(next)}>
-      <button>{next ? ">" : "<"}</button>
+      <NPBtnStyled>{next ? ">" : "<"}</NPBtnStyled>
     </Link>
   )
 }
