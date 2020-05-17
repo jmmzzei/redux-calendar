@@ -8,7 +8,7 @@ const DayCalendar = ({ match, months }) => {
   let month = match.params.month
   return (
     <>
-      <Navbar month={month} />
+      <Navbar month={month} match={match} />
       <CalendarStyled month items={months[month].days}>
         {(() => {
           let arr = []
