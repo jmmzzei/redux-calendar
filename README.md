@@ -1,5 +1,5 @@
 # redux-calendar
 
-Calendar client-side app that makes use of Local Storage to persist data.
+Client-side calendar web app that makes use of the LocalStorage to persist data.
 
-### WIP
+Visit: https://jmmzzei.github.io/redux-calendar/
